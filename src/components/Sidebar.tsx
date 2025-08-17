@@ -5,6 +5,7 @@ import Image from "next/image"
 import { LiaPlusCircleSolid } from "react-icons/lia"
 import { LuPlus } from "react-icons/lu"
 import { MdOutlineLibraryMusic } from "react-icons/md";
+import { FaTrashAlt } from "react-icons/fa";
 
 
 export default function Sidebar() {
@@ -36,27 +37,31 @@ export default function Sidebar() {
             <div className="flex justify-between text-primary-text items-center p-2 mb-4">
                 <h2 className="font-bold">Your Library</h2>
                 <Link href="/upload-song">
-                <LuPlus size="20"/>
+                <LuPlus size={20}/>
                 </Link>
             </div>
 
             <div className="flex flex-col">
-              <div className="flex gap-2 items-center cursor-pointer mb-4 p-2 rounded-lg hover:bg-hover">
-                <Image
-                  src="/images/cover-1.jpeg"
-                  alt='cover-image'
-                  width={300}
-                  height={300}
-                  className='w-10 h-10 object-cover rounded-lg'/>
-                
-                <div>
-                  <p className="text-primary-text font-semibold">Midnight Echoes</p>
-                  <p className="text-secondary-text text-sm">Neon Skyline</p>
+              <div className="flex justify-between items-center cursor-pointer mb-4 p-2 rounded-lg hover:bg-hover">
+                <div className="flex gap-2 items-center">
+                  <Image
+                    src="/images/cover-1.jpeg"
+                    alt='cover-image'
+                    width={300}
+                    height={300}
+                    className='w-10 h-10 object-cover rounded-lg'/>
+                  
+                  <div>
+                    <p className="text-primary-text font-semibold">Midnight Echoes</p>
+                    <p className="text-secondary-text text-sm">Neon Skyline</p>
+                  </div>
                 </div>
                 
+                <button className="text-secondary-text cursor-pointer">
+                  <FaTrashAlt/>
+                </button>
 
               </div>
-
                <div className="flex gap-2 items-center cursor-pointer mb-4 p-2 rounded-lg hover:bg-hover">
                 <Image
                   src="/images/cover-2.jpeg"
