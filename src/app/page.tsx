@@ -1,4 +1,4 @@
-
+import Allsongs from "@/components/Allsongs";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 
@@ -8,6 +8,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Sidebar />
+        <Allsongs />
       </main>
     </div>
   );
